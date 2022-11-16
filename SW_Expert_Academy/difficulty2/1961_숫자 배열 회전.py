@@ -13,8 +13,21 @@ def rotate90(board,empty_board):
         j_idx = 0
     return empty_board
 
+def clear_list(list):
+    for i in range(len(list)):
+        for j in range(len(list)):
+            list[i][j] = 0
+    return list
+
+def insert_val(new_list,prev_list):
+    n = len(new_list)
+    for i in range(n):
+        for j in range(n):
+            new_list[i][j] = prev_list[i][j]
+    return new_list
+
 for test_case in range(1,N+1):
-    print(f"#{test_case} ",end="")
+    print(f"#{test_case}")
     num = int(input())
     board_first = []
     degree90 = []
@@ -35,14 +48,29 @@ for test_case in range(1,N+1):
     for _ in range(num):
         degree270.append([0]*num)
     
-    degree90 = rotate90(board_first,empty_board)
-    degree180 = rotate90(degree90,empty_board)
-    degree270 = rotate90(degree180,empty_board)
-    
-    print(degree90)
-    print(degree180)
-    print(degree270)
+    temp_list = rotate90(board_first,empty_board)
+    insert_val(degree90,temp_list)
+    clear_list(temp_list)
 
-    for J in range(len(degree90)):
-        for i in range(len(degree90)):
-          pass 
+    temp_list = rotate90(degree90,empty_board)
+    insert_val(degree180,temp_list)
+    clear_list(temp_list)
+
+
+    temp_list = rotate90(degree180,empty_board)
+    insert_val(degree270,temp_list)
+    clear_list(temp_list)
+
+
+    for i in range(num):
+        for j in range(num):
+            print(degree90[i][j],end="")
+        print("",end=" ")
+        for j in range(num):
+            print(degree180[i][j],end="")
+        print("",end=" ")
+        for j in range(num):
+            print(degree270[i][j],end="")
+        print()
+
+    
