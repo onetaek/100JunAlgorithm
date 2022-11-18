@@ -18,12 +18,13 @@ for test_case in range(1,T+1):
     # 한바퀴돌고 [i][j]의 인덱스라있으면 j가 0이면(0번째 열이면) -1
     # 그렇지 않을 경우에는 -2씩해둔다. 만약 값을 뺐는데 0이다! 그러면 종료
     vector = {0:N,1:N,2:N,3:N}
+    # 0: 우, 1: 하, 2: 좌, 3: 상
     num = 0
     move_cnt = 100
     vec = 0
     i,j = 0,0
     while True :
-        print("현재위치) i,",i,"j",j)
+        print("i:",i,"j:",j,"vec:",vec,"vec%4:",vec%4)
         print(board)
         vec = vec % 4
         if vec == 0:
@@ -38,7 +39,7 @@ for test_case in range(1,T+1):
                     num += 1
                     board[i][j] = num
                     j += 1
-                    vec += 1
+                vec += 1
                 j -= 1
         elif vec == 1:
             if i ==0 :
@@ -52,7 +53,7 @@ for test_case in range(1,T+1):
                     num += 1
                     board[i][j] = num
                     i += 1
-                    vec += 1
+                vec += 1
                 j -= 1
         elif vec == 2:
             if i ==0 :
@@ -66,7 +67,7 @@ for test_case in range(1,T+1):
                     num += 1
                     board[i][j] = num
                     j -= 1
-                    vec += 1
+                vec += 1
                 j -= 1
         elif vec == 3:
             if i ==0 :
@@ -80,6 +81,6 @@ for test_case in range(1,T+1):
                     num += 1
                     board[i][j] = num
                     i -= 1
-                    vec += 1
+                vec += 1
                 j -= 1
     print(board)
