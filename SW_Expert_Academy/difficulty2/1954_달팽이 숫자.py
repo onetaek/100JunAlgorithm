@@ -25,10 +25,11 @@ for test_case in range(1,T+1):
     i,j = 0,0
     while True :
         print("i:",i,"j:",j,"vec:",vec,"vec%4:",vec%4)
-        print(board)
+        
         vec = vec % 4
+        # 오른쪽으로 이동
         if vec == 0:
-            if i ==0 :
+            if j ==0 :
                 vector[vec] -= 1
             else:
                 vector[vec] -= 2
@@ -39,38 +40,46 @@ for test_case in range(1,T+1):
                     num += 1
                     board[i][j] = num
                     j += 1
+                    print("i:",i,"j:",j,"vec:",vec,"vec%4:",vec%4)
+                    for list in board:
+                        print(list)
+                    print("--------------------------------------")
                 vec += 1
                 j -= 1
+        # 아래쪽으로 이동
         elif vec == 1:
-            if i ==0 :
-                vector[vec] -= 1
-            else:
-                vector[vec] -= 2
+            # if j ==0 :
+            #     vector[vec] -= 1
+            # else:
+            vector[vec] -= 2
             if vector[vec] == 0:
                 break
             else:
+                # print("vector[vec]+1",vector[vec]+1)
                 for _ in range(vector[vec]+1):
-                    num += 1
-                    board[i][j] = num
                     i += 1
+                    num += 1
+                    board[i][j] = num
                 vec += 1
-                j -= 1
+        # 왼쪽으로 이동
         elif vec == 2:
-            if i ==0 :
-                vector[vec] -= 1
-            else:
-                vector[vec] -= 2
+            # if j ==0 :
+            #     vector[vec] -= 1
+            # else:
+            vector[vec] -= 2
             if vector[vec] == 0:
                 break
             else:
+                print("!!!!!!!",vector[vec]+1,"!!!!!!")
                 for _ in range(vector[vec]+1):
-                    num += 1
-                    board[i][j] = num
                     j -= 1
+                    num += 1
+                    # print("i:",i-1,"j:",j-1,"board[i][j]",board[i-1][j-1])
+                    board[i][j] = num
                 vec += 1
-                j -= 1
+        #위쪽으로 이동
         elif vec == 3:
-            if i ==0 :
+            if j ==0 :
                 vector[vec] -= 1
             else:
                 vector[vec] -= 2
@@ -78,9 +87,16 @@ for test_case in range(1,T+1):
                 break
             else:
                 for _ in range(vector[vec]+1):
+                    i -= 1
                     num += 1
                     board[i][j] = num
-                    i -= 1
+
+                    for list in board:
+                        print(list)
+                    print("--------------------------------------")
                 vec += 1
-                j -= 1
-    print(board)
+
+        for list in board:
+            print(list)
+        print("--------------------------------------")
+    
