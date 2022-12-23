@@ -12,20 +12,17 @@ for myList in board:
     if myList[0] == "push":
         myStack.append(myList[1])
     elif myList[0] == "top":
-        if myList == []:
-            print("null")
+        if myStack == []:
+            print("-1")
         else:
             print(myStack[len(myStack)-1])
     elif myList[0] == "pop":
-        if myList is None:
-            print("null")
+        if len(myStack) == 0:
+            print("-1")
         else:
-            print(myStack)
-            print("!!!!!!",len(myStack))
-            print(myStack[len(myStack)-1])
-            myStack.remove(myStack[len(myStack)-1])
+            print(myStack.pop())
     elif myList[0] == "empty":
-        if myList == []:
+        if myStack == []:
             print("1")
         else:
             print("0")
