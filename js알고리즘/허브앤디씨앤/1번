@@ -1,0 +1,50 @@
+function getHighestScorer(answers) {
+  const answerKey = { 1: 'a', 3: 'b', 5: 'c' };
+  let scores = {};
+
+  // 각 수포자별로 점수 계산
+  for (let i = 0; i < answers.length; i++) {
+    const answer = answers[i];
+    const scorer = answerKey[answer.answer];
+    const score = answer.score;
+
+    if (scores[scorer]) {
+      scores[scorer] += score;
+    } else {
+      scores[scorer] = score;
+    }
+  }
+
+  // 가장 높은 점수를 받은 수포자 찾기
+  let highestScorers = [];
+  let highestScore = 0;
+  for (const scorer in scores) {
+    if (scores[scorer] > highestScore) {
+      highestScorers = [{ name: scorer, score: scores[scorer] }];
+      highestScore = scores[scorer];
+    } else if (scores[scorer] === highestScore) {
+      highestScorers.push({ name: scorer, score: scores[scorer] });
+    }
+  }
+
+  // 결과 출력
+  const result = highestScorers
+    .map(scorer => scorer.name + ' : ' + scorer.score)
+    .join(', ');
+  console.log(result);
+}
+
+// 테스트
+const answers1 = [
+  { answer: 1, score: 5 },
+  { answer: 3, score: 3 },
+  { answer: 2, score: 4 }
+];
+getHighestScorer(answers1); // 출력: a : 5
+
+const answers2 = [
+  { answer: 1, score: 5 },
+  { answer: 5, score: 5 },
+  { answer: 2, score: 4 }
+];
+getHighestScorer(answers2); // 출력: a : 5, c : 5
