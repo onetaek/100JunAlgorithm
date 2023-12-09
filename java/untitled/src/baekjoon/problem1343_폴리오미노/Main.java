@@ -1,4 +1,4 @@
-package baekjoon.problem1343;
+package baekjoon.problem1343_폴리오미노;
 
 import java.util.Scanner;
 
