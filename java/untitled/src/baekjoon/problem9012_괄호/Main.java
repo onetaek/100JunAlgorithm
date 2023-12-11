@@ -1,10 +1,10 @@
-package baekjoon.problem9012;
+package baekjoon.problem9012_괄호;
 
 import java.util.Scanner;
 import java.util.Stack;
 
 /**
- * 백준 9012번
+ * 백준 9012번 (S4)
  * https://www.acmicpc.net/problem/9012
  */
 public class Main {
@@ -17,15 +17,20 @@ public class Main {
     }
 
     public static boolean isVPS(String vps) {
-        Stack<String> stack = new Stack<>();
+        Stack<String> vpsStack = new Stack<>();
         String[] vpsArray = vps.split("");
 
-
-
         for (String v : vpsArray) {
-
+            if (v.equals("(")) {
+                vpsStack.push("(");
+            } else if (v.equals(")")) {
+                if (vpsStack.isEmpty()) {
+                    return false;
+                } else {
+                       vpsStack.pop();
+                }
+            }
         }
-
-        return true;
+        return vpsStack.isEmpty();
     }
 }
