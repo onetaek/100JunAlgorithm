@@ -1,58 +1,37 @@
 package baekjoon.problem14916_거스름돈;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
 
 /**
  * 백준 14916번
  * https://www.acmicpc.net/problem/14916
  */
 public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String money = scanner.next();
-        System.out.println(answer(money));
+    static int[] memo = new int[100001];
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+
+        Arrays.fill(memo, Integer.MAX_VALUE);
+        memo[0] = 0;
+
+        System.out.println(answer(n));
     }
 
-    public static int answer(String stringMoney) {
+    public static int answer(int n) {
+        int[] coins = {2, 5};
 
-        int digitOfOne =  stringMoney.charAt(stringMoney.length() - 1) - '0';
-        int money = Integer.parseInt(stringMoney);
-        int moneyCount = 0;
-
-        if (money == 1 || money == 3) {
-            return -1;
+        for (int coin : coins) {
+            for (int i = coin; i <= n; i++) {
+                if (memo[i - coin] != Integer.MAX_VALUE) {
+                    memo[i] = Math.min(memo[i], memo[i - coin] + 1);
+                }
+            }
         }
-
-        switch (digitOfOne) {
-            case 0:
-            case 5:
-                moneyCount = money / 5;
-                break;
-            case 2:
-            case 4:
-                moneyCount += money / 5;
-                moneyCount += (money % 5) / 2;
-                break;
-            case 6:
-            case 8:
-                moneyCount += (money / 10) * 2;
-                moneyCount += (money % 10) / 2;
-                break;
-            case 1:
-                moneyCount += (money / 5) - 1 + 3;
-                break;
-            case 3:
-                moneyCount += (money / 5) - 1 + 4;
-                break;
-            case 7:
-                moneyCount += (money / 5) + 1;
-                break;
-            case 9:
-                moneyCount += (money / 5) + 2;
-                break;
-        }
-
-        return moneyCount;
+        return memo[n] == Integer.MAX_VALUE ? -1 : memo[n];
     }
-
 }
