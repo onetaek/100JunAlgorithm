@@ -6,8 +6,8 @@ import java.util.stream.IntStream;
 public class Main {
 
     public static void main(String[] args) {
-        int[] queue1 = new int[] {1, 1, 1, 1, 1, 1, 1, 1, 1, 10};
-        int[] queue2 = new int[] {1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+        int[] queue1 = new int[] {1, 1, 1, 1, 1, 1, 1, 1, 1, 10 };
+        int[] queue2 = new int[] {1, 1, 1, 1, 1, 1, 1, 1, 1, 1  };
 
         System.out.println(solution(queue1,queue2));
     }
@@ -21,10 +21,17 @@ public class Main {
         long goalSum = (queue1Sum + queue2Sum) / 2;
         int count = 0;
 
+        if ((queue1Sum + queue2Sum) % 2 == 1) {
+            return -1;
+        }
+
         int[] array = IntStream.concat(Arrays.stream(queue1), Arrays.stream(queue2)).toArray();
         long sum = queue1Sum;
 
         while(startIndex <= endIndex) {
+            if (endIndex > array.length - 1) {
+                break;
+            }
             if (sum < goalSum) {
                 endIndex++;
                 sum += array[endIndex];

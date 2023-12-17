@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 /**
  * 백준 1106
  * https://www.acmicpc.net/problem/1106
+ * 안품
  */
 public class Main {
     public static void main(String[] args) throws IOException {
