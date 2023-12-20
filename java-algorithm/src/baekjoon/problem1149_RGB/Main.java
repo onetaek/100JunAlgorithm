@@ -1,4 +1,4 @@
-package baekjoon.problem1149;
+package baekjoon.problem1149_RGB;
 
 import java.io.BufferedReader;
 import java.io.IOException;
