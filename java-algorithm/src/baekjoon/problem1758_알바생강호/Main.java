@@ -1,4 +1,4 @@
-package baekjoon.problem1758;
+package baekjoon.problem1758_알바생강호;
 
 import java.io.BufferedReader;
 import java.io.IOException;

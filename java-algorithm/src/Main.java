@@ -5,25 +5,7 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(reader.readLine());
-        int[][] coordinate = new int[N][2];
-
-        for (int i = 0; i < coordinate.length; i++) {
-            String[] s = reader.readLine().split(" ");
-            coordinate[i][0] = Integer.parseInt(s[0]);
-            coordinate[i][1] = Integer.parseInt(s[1]);
-        }
-
-        // 병합 정렬 사용
-        mergeSort(coordinate, 0, coordinate.length - 1);
-
-        for (int[] x : coordinate) {
-            for (int y : x) {
-                System.out.print(y + " ");
-            }
-            System.out.println();
-        }
+        System.out.println("hello world");
     }
 
     // 병합 정렬을 수행하는 메서드
