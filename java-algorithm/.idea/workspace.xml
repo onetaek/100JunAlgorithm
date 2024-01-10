@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea1bfc95-5b0a-4c32-b09e-fcf3d72713a0" name="Changes" comment="merge conflict resolve">
-      <change afterPath="$PROJECT_DIR$/src/baekjoon/problem1463_1로만들기/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/baekjoon/problem1676/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,26 +49,13 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.baekjoon.problem1676.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="baekjoon.problem1463_1로만들기.Main" />
       <module name="untitled" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="baekjoon.problem1463_1로만들기.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Sample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="baekjoon.problem1260_DFS와BFS_S2.Sample" />
-      <module name="untitled" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="baekjoon.problem1260_DFS와BFS_S2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,13 +102,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="baekjoon.problem1676.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="baekjoon.problem1676.Main" />
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="baekjoon.problem1676.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.baekjoon.problem1676.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.baekjoon.problem1026_보물.Main" />
         <item itemvalue="Application.baekjoon.problem1012_유기농배추.Main" />
         <item itemvalue="Application.baekjoon.problem1260_DFS와BFS_S2.Main" />
-        <item itemvalue="Application.Sample" />
       </list>
     </recent_temporary>
   </component>
@@ -160,6 +161,9 @@
       <workItem from="1703940034218" duration="1282000" />
       <workItem from="1704114146253" duration="1761000" />
       <workItem from="1704372528811" duration="3739000" />
+      <workItem from="1704615132922" duration="2984000" />
+      <workItem from="1704801738862" duration="599000" />
+      <workItem from="1704896531508" duration="830000" />
     </task>
     <task id="LOCAL-00001" summary="merge conflict resolve">
       <option name="closed" value="true" />
