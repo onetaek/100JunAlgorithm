@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea1bfc95-5b0a-4c32-b09e-fcf3d72713a0" name="Changes" comment="merge conflict resolve">
-      <change afterPath="$PROJECT_DIR$/src/baekjoon/problem1676/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ea1bfc95-5b0a-4c32-b09e-fcf3d72713a0" name="Changes" comment="merge conflict resolve" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -163,7 +160,7 @@
       <workItem from="1704372528811" duration="3739000" />
       <workItem from="1704615132922" duration="2984000" />
       <workItem from="1704801738862" duration="599000" />
-      <workItem from="1704896531508" duration="830000" />
+      <workItem from="1704896531508" duration="1038000" />
     </task>
     <task id="LOCAL-00001" summary="merge conflict resolve">
       <option name="closed" value="true" />
