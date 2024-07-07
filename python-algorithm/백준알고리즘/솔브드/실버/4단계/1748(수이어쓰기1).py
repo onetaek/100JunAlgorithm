@@ -2,7 +2,7 @@ import sys
 
 #sys.stdin = open('input.txt','r')
 
-n = str(sys.stdin.readline())
+n = str(sys.stdin.readline().strip())
 
 last_index = len(n) - 1
 
